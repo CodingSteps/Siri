@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Project 1</title>
+<style>
+body{
+margin: 0px;
+background: darkblue;
+}
+.container1{
+background-color: darkblue;
+text-align: center;
+padding-bottom:15px;
+}
+h2,h3{
+color: yellow;
+text-align: center;
+}
+#me{
+font-size: 40px;
+}
+.container2{
+background-color:darkgoldenrod;
+width: 90%;
+margin: auto;
+margin-top: 10px;
+padding: 15px 15px 0px 15px;
+}
+.p{
+width: 400px;
+margin: auto;
+}
+.m{
+background: darkviolet;
+color: lightblue;
+width: 90%;
+margin: auto;
+} 
+.mia{
+ width: 500px;
+ margin: auto;
+ padding: 20px 20px 20px 20px;
+}
+.container3{
+background: black;
+color: yellow;
+}
+.o{
+text-align: center;
+background: red;
+color: white;
+margin: 0px 10px 0px 10px;
+}
+.Jkrowling {
+  background-color: darkgoldenrod;
+  color: deepskyblue;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .Jkrowling:hover {
+  background-color: purple; 
+}
+
+.book {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+p{
+background: purple;
+color: gold;
+text-align: center;
+}
+</style>
+<style>
+body {font-family: Arial;}
+.tab {
+  overflow: hidden;
+  border: 1px solid red;
+  background-color: cyan;
+  color: darkred;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 1s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: darkred;
+}
+
+.tab button.active {
+  background-color: darkred;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid red;
+  border-top: none;
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0px 6px 0px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: gold;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: purple;
+  outline: none;
+}
+
+button {
+  background-color: hotpink;
+  color: green;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: pink;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: yellow;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px light blue;
+  z-index: 1;
+  color:blue;
+}
+
+.dropdown-content .header {
+  background: lightblue;
+  padding: 16px;
+  color: Blue;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: darksalmon;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: purple;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+<style>
+  body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: gold;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: red;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: gold;
+  color: red;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+  <button class="tablinks" onclick="openCity(event, 'London')">Close</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Actors and Books</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">My fav movie</button>
+</div>
+<div class="tab">
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Order
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Food</h3>
+          <a href="#">Feast of Honor</a>
+          <a href="#">Red Turkey</a>
+          <a href="#">Black Beans</a>
+        </div>
+        <div class="column">
+          <h3>Drinks</h3>
+          <a href="#">Bubbling Potion</a>
+          <a href="#">Unicorn Tears</a>
+          <a href="#">Water of the Everlasting Magic Pond</a>
+        </div>
+        <div class="column">
+          <h3>Dessert</h3>
+          <a href="#">Magic Cream Swirl</a>
+          <a href="#">Light sparkling Tart</a>
+          <a href="#">Darkest Night of detention</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">Other Webpages</a>
+  <a href="#">Comments</a>
+  <a href="#">Fav Part</a>
+  <a href="#">Best Paraghaph</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+<h2>J.k rowling</h2>
+<h3>The author of <em>Harry Potter</em></h3>
+<div id="Londons" class="tabcontent">
+  <h3>Closed</h3>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Actors and Books</h3>
+  <p>Harry , Hermione , Ron.</p><br>
+<p>Harry Potter and the Sorcerer’s Stone ,  Harry Potter and the Chamber of Secrets ,  Harry Potter and the Prisoner of Azkaban , Harry Potter and the Goblet of Fire , Harry Potter and the Order of the Phoenix , Harry Potter and the Half-Blood Prince , Harry Potter and the Deathly Hallows.</p>
+</div>
+<div id="Tokyo" class="tabcontent">
+  <h3>My fav movie and book.</h3>
+  <p>Harry potter and Sorcerer’s Stone.<br>
+  Order from Magic Caḟe Today.<br>Hover over the button above to see the menu.</p>
+</div>
+    <div class="container2">
+         <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Cursed_Child_new_poster.jpg"></img>
+       </div>
+       <div class="m">My fav movie and book.</div>
+      </div>
+</div><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container3">
+   <div class="mia">
+Joanne Rowling was born on 31st July 1965 at Yate General Hospital near Bristol, and grew up in Gloucestershire in England and in Chepstow, Gwent, in south-east Wales. ... Jo wanted to be a writer from an early age. She wrote her first book at the age of six – a story about a rabbit, called 'Rabbit'.<br>
+
+Joanne Rowling CH, OBE, HonFRSE, FRCPE, FRSL (/ˈroʊlɪŋ/ ROH-ling;[1] born 31 July 1965), better known by her pen name J. K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series, which has won multiple awards and sold more than 500 million copies,[2][3] becoming the best-selling book series in history.[4] The books are the basis of a popular film series, over which Rowling had overall approval on the scripts[5] and was a producer on the final films. <br>[6] She also writes crime fiction under the pen name Robert Galbraith.<br>
+
+Born in Yate, Gloucestershire, Rowling was working as a researcher and bilingual secretary for Amnesty International in 1990 when she conceived the idea for the Harry Potter series while on a delayed train from Manchester to London.[7] The seven-year period that followed saw the death of her mother, birth of her first child, divorce from her first husband, and relative poverty until the first novel in the series, Harry Potter and the Philosopher's Stone, was published in 1997.There were six sequels, of which the last was released in 2007. Since then, Rowling has written several books for adult readers: The Casual Vacancy (2012) and—under the pseudonym Robert Galbraith—the crime fiction Cormoran Strike series.<br>[8] In 2020, her "political fairytale" for children, The Ickabog, was released in instalments in an online version.[9]<br>
+
+Rowling has lived a "rags to riches" life in which she progressed from living on benefits to being named the world's first billionaire author by Forbes.[10] Rowling disputed the assertion, saying she was not a billionaire.[11] Forbes reported that she lost her billionaire status after giving away much of her earnings to charity.
+[12] Her UK sales total in excess of £238 million, making her the best-selling living author in Britain.[13] The 2021 Sunday Times Rich List estimated Rowling's fortune at £820 million, ranking her as the 196th richest person in the UK.[14] Time named her a runner-up for its 2007 Person of the Year, noting the social, moral, and political inspiration she has given her fans.[15] Rowling was appointed a member of the Order of the Companions of Honour (CH) in the 2017 Birthday Honours for services to literature and philanthropy. In October 2010, she was named the "Most Influential Woman in Britain" by leading magazine editors.<br> 
+   </div>
+</div>
+<button class="Jkrowling">Fact 1</button>
+<div class="book">
+  <p><em>J.K. Rowling's Harry Potter Manuscript was Rejected 12 Times. The first manuscript of Harry Potter and the Philosopher's Stone was produced by Rowling while sitting in small cafes around Edinburgh.</em>
+</div>
+
+<button class="Jkrowling">Fact 2</button>
+<div class="book">
+  <p><em>J.K. Rowling Suffered Clinical Depression Which Lead to Dementors.</em></p>
+</div>
+
+<button class="Jkrowling">Fact 3</button>
+<div class="book">
+  <p><em>J.K. Rowling is the UK’s national treasure. Her rags to riches story following her creation of the Harry Potter book series changed the world for the better; she gave us magic.</em></p>
+</div>
+<script>
+var acc = document.getElementsByClassName("Jkrowling");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<p class="o"><em>Read more on <a href="https://en.wikipedia.org/wiki/J._K._Rowling">wikepedia</a></em></p>
+</body>
+</html>
