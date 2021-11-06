@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Peace</title>
+<style>
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+}
+
+.pimg1, .pimg2, .pimg3{
+  position:relative;
+  opacity:0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.pimg1{
+  background-image:url('images/R.jpg');
+  min-height:100%;
+  background-attachment: fixed;
+}
+
+.pimg2{
+  background-image:url('images/o.jpg');
+  min-height:400px;
+  background-attachment: fixed;
+}
+
+.pimg3{
+background-image:url('images/b.jpg');
+  min-height:400px;
+  background-attachment: fixed;
+}
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+  background-color:lavenderblush;
+  color:purple;
+}
+
+.section-dark{
+  background-color:black;
+  color:lavender;
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.ptext .border{
+  background-color:lavenderblush;
+  color:purple;
+  padding:20px;
+}
+
+.ptext .border.trans{
+  background-color:transparent;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Our Peace
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-light">
+    <h2>Peace</h2>
+    <p>
+      Peace is relaxation
+    </p>
+  </section>
+
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans">
+        Peace
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-dark">
+    <h2>Peace</h2>
+    <p>
+      Peace is light.
+    </p>
+  </section>
+
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border trans">
+        Peace
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-dark">
+    <h2>Peace</h2>
+    <p>
+      Peace is rest.
+    </p>
+  </section>
+
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Peacer
+      </span>
+    </div>
+  </div>
+</body>
+</html>
