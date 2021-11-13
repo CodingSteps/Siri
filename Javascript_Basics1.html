@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<style>
+h2{
+color: darkred;
+}
+</style>
+<script>
+	function upperCase()
+		{ 
+
+			var input = document.getElementById("upperCase").value;
+			//var input = "hoW aRe yOu?";
+			var answer = input.toUpperCase();
+			document.getElementById("uppercaseoutput").innerHTML = answer;
+		}
+
+
+    function upperCasefirstchar()
+    {      
+    	//Input is hoW aRe yOu? to How are you?
+    	//var input = "hoW aRe yOu?";
+    	  var input = document.getElementById("upperCasefirstchar").value;
+    	   var answer = input[0].toUpperCase();
+			var mex = input.slice(1);
+			var bar = mex.toLowerCase();
+			document.getElementById("upperCasefirstcharoutput").innerHTML = answer + bar;
+			console.log(answer + bar)
+			//Input is hoW aRe yOu? to How are you?
+
+    }
+          
+
+	function date()
+		{
+			var date = Date();
+			document.getElementById("date").innerHTML = date;
+		}
+
+		function Elephant(){
+			var word = "Elephant";
+			var outputword1 = word.slice(5);
+			var outputword2 = word.slice(4,6);
+			var outputword3 = word.slice(1,3);
+			var outputword4 = word.slice(7);
+			document.getElementById("SliceElephant").innerHTML = outputword1 + " " +outputword3+outputword4+" "+ outputword2+outputword4 ;
+		}
+
+	function StringSpliter(){
+			var InputStrings = document.getElementById("StringSpliter").value;
+			var Split1 = InputStrings.slice(0,4);
+			var Split2 = InputStrings.slice(5);
+			document.getElementById("StringSpliterOutput").innerHTML = Split1.length + " " + Split2.length;
+			}
+
+	function StringSpliterbye(){
+			var InputStrings = document.getElementById("StringSpliterbye").value;
+			var Finde = InputStrings.indexOf("e");
+			//var Finde2 = Finde + 1;
+			var Split1 = InputStrings.slice(0,Finde);
+			var Split2 = InputStrings.slice(Finde);
+			 //document.write(Split2);
+			document.getElementById("StringSpliterOutputbye").innerHTML = Split1 + " , " +  Split2;
+			}
+
+    function myreplace() {
+
+  			var input = document.getElementById("replaceoutput").innerHTML;
+  			var output = input.replace("Hello","Welcome");
+  			document.getElementById("replaceoutput").innerHTML = output;
+  			}
+
+			"use strict";
+             x = 3.14
+             function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+
+} 
+  
+function Characterat()
+{
+let input = document.getElementById("characterat").value;
+let charoutput = input.charAt(7);
+let indexoutput = input.indexOf("m");
+let myrepeat = input.repeat(2);
+let charcodeoutput = input.charCodeAt(input.length-2);
+document.getElementById("Repetition").innerHTML = myrepeat;
+document.getElementById("Charectercodeat").innerHTML = charcodeoutput;
+document.getElementById("charAtouput").innerHTML = charoutput;
+document.getElementById("indexofoutput").innerHTML = indexoutput;
+}
+
+</script>
+</head>
+<body>
+
+<h2> DATE </h2>
+<p id= "date">  </p> <input type = button value= Date onclick = "date()"> <br><br>
+
+<h2> UPPER CASE </h2>
+Enter a lower case text : <input type = text id ="upperCase"> <br><br>
+<input type = button value= UpperCase onclick = "upperCase()">
+<p id="uppercaseoutput"></p>
+
+<h2> UPPER CASE FIRST CHARACTER </h2>
+Enter text : <input type = text id ="upperCasefirstchar"><br><br>
+<input type = button value= Uppercasefirstchar onclick = "upperCasefirstchar()">
+<p id="upperCasefirstcharoutput"></p>
+</body>
+
+<h2>ELEPHANT</h2>
+<input type = button value= Elephant onclick = "Elephant()">
+<p id="SliceElephant"></p>
+
+<h2>SPLIT A STRING AT 5 CHARACTER & COUNT CHARACTERS</h2>
+Enter a String with space : <input type = text id ="StringSpliter"><br><br>
+<input type = button value=StringSpliter onclick = "StringSpliter()">
+<p id="StringSpliterOutput"></p>
+
+<h2>SPLIT A STRING AT THE FIRST OCCURANCE OF LETTER E </h2>
+Enter a StringSpliter with letter e: <input type = text id ="StringSpliterbye"><br><br>
+<input type = button value=StringSpliterbye onclick = "StringSpliterbye()">
+<p id="StringSpliterOutputbye"></p>
+<br>
+
+<h2>SPY MESSAGE</h2>
+<h3 onclick="changeText(this)">Click on Me!</h3>
+<script>
+function changeText(id) {
+  id.innerHTML = "Hey!";
+}
+</script>
+<h2>REPLACE</h2>
+<!-- Enter a string with Hello <input type = text id ="replaceinput"><br><br> -->
+<p id ="replaceoutput">Hello world</p>
+<input type = button value = Replace onclick = "myreplace()">
+
+<h2>STRING FUNCTIONS</h2>
+Enter a string <input type = text id ="characterat">
+<button onclick="Characterat()">CLICK ME</button>
+<p> Character At</p> <p id="charAtouput"> </p>
+<p> Inex of</p> <p id="indexofoutput"> </p>
+<p> Charecter code at</p> <p id="Charectercodeat"> </p>
+<p> Repeat</p> <p id="Repetition"> </p>
+<p> To String</p> <p id="tostring"> </p>
+</html>
