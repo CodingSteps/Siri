@@ -14,7 +14,7 @@ document.write("The odd numbers are :  </br> " + myarray );
 
 function Timesby24(){
 number = parseInt(document.getElementById("num").value);
-document.getElementById("p").innerHTML = number * 24;
+document.getElementById("answer").innerHTML = number * 24;
 }
 
 function Timesby29(){
@@ -45,7 +45,7 @@ String.prototype.reverse_string = function() {
 <input type="button" onClick="Timesby24()" Value="Timesby24 " />
 <input type="button" onClick="Timesby29()" Value="Timesby29 " />
 <input type="button" onClick="Timesby10()" Value="Timesby10 " />
-<p>The answer is:</p>
+<p id = "answer">The answer is:</p>
 <span id = "a"></span>
 </body>
 </html>
