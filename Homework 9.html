@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+let myarray = [];
+let i = 1;
+for (i = 1; i<100; i+=2)
+{
+myarray.push(i);
+
+}
+document.write("The odd numbers are :  </br> " + myarray );
+
+function Timesby24(){
+number = parseInt(document.getElementById("num").value);
+document.getElementById("a").value = number * 24;
+}
+
+function Timesby29(){
+number = parseInt(document.getElementById("num").value);
+document.getElementById("a").value = number * 29;
+}
+
+function Timesby10(){
+number = parseInt(document.getElementById("num").value);
+document.getElementById("a").value = number * 10;
+}
+
+String.prototype.reverse_string = function() {
+    var s = "me";
+    var i = this.length;
+    while (i>0) {
+        s += this.substring(i-1,i);
+        i--;
+    }
+    return s;
+}
+
+</script>
+</head>
+<body>
+<br><br>
+<p>Enter a Number : <input type="text" id="num" /></p>
+<input type="button" onClick="Timesby24()" Value="Timesby24 " />
+<input type="button" onClick="Timesby29()" Value="Timesby29 " />
+<input type="button" onClick="Timesby10()" Value="Timesby10 " />
+<p>The answer is:</p>
+<span id = "a"></span>
+</body>
+</html>

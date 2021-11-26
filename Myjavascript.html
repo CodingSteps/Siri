@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>myjavascript</title>
+<script>
+function namenumber()
+{
+	var input = document.getElementById("words").value;
+	let i = 0;
+	let arraypart = [];
+	var fn =1;
+	var fout =1;
+	var p = input.length;
+	for (i=0; i < p;i++)
+	{
+	fn = input.charAt(i);
+	fout = "Letter" + i + "of my name :  " + fn + "<br>";
+	arraypart[i] = fout;
+	} 
+    document.getElementById("finaloutput").innerHTML = arraypart;
+
+}
+
+</script>
+</head>
+	<p>Enter your name : <input type="text" id="words"></p>
+ 	<button onclick="namenumber()">name</button>
+ 	<p id="finaloutput">Output</p>
+</body>
+</html>

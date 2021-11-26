@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homework9 part2 </title>
+<script>
+function me() 
+{
+    var n = parseInt(document.getElementById("m").value);
+
+	if (n>50 && n<99) 
+	{
+		document.getElementById("result").innerHTML = "true";	
+	}
+	else {
+		document.getElementById("result").innerHTML= "false";
+	}
+}
+</script>
+</head>
+<body>
+<h1>Finding a number between 56,99</h1>
+<p>Enter a number between 50,99 :<input type="text" id="m"></p>
+<button onclick= "me()" >Click me</button>
+<p id="result">Result:</p>
+</body>
+</html>

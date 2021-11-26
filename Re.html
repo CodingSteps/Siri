@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+	function tables()
+	{
+	let input = parseInt(document.getElementById("input").value);
+	let p = 0;
+	let output = 1;
+	let ansoutput2 = [];
+	let answer = 1;
+	for (p=0;p<=10;p++) 
+	{
+		answer = input*p;
+		output = input + "x" + p + "=" + answer;
+		ansoutput2[p] = output;
+	}
+	document.getElementById("tables").innerHTML = ansoutput2;
+	}
+</script>
+</head>
+<body>
+<p>Enter a number :<input type="text" name="m" id="input"></p>
+<button onclick = "tables()">Times</button>
+<p id="tables"></p>
+</body>
+</html>
