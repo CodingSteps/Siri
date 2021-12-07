@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<script>
+
+var bookstore = ["Harry Potter","Harry Lad","Alice","Ken"];
+
+function AddWord(){
+var Enteredword = document.getElementById("Storebooks").value;
+bookstore.push(Enteredword);
+console.log(bookstore);
+}
+
+function findWord(){
+var inputword = document.getElementById("findbooks").value;
+
+var findbook = bookstore.find(output =>{
+if (output===inputword) return true;
+});
+console.log(findbook);
+
+}
+
+
+</script>
+<style>
+body{
+background: peachpuff;
+margin: 0px;
+}
+
+h2{
+text-align: center;
+font-size: 27px;
+}
+
+h1{
+text-align: center;
+border-bottom: solid darkblue 5px;
+}
+
+input{
+border-radius: 1000px;
+text-align: center;
+}
+
+button{
+border-radius: 1000px;
+text-align: center;
+background-color: peachpuff;
+height: 40px;
+font-size: 15px;
+}
+
+p{
+color: green;
+font-size: 27px;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Library Management</h1>
+<h2>Enter your book title:<input type="text" id="Storebooks"><button onclick="AddWord()">Add to book Repository</button></h2>
+<h2>Enter your book title/Keyword:<input type="text" id="findbooks"><button onclick="findWord()">Find book</button></h2>
+<p id="bookdata"></p>
+</body>
+</html>
