@@ -9,8 +9,18 @@ var bookstore = ["Harry Potter","Harry Lad","Alice","Ken"];
 
 function AddWord(){
 var Enteredword = document.getElementById("Storebooks").value;
+let counter = 0;
+for (i=0;i<bookstore.length;i++){
+if (bookstore[i] == Enteredword) {
+console.log("Book exists");
+counter=1;
+break;
+}
+}
+if(counter != 1){
 bookstore.push(Enteredword);
 console.log(bookstore);
+}
 }
 
 function findWord(){
@@ -20,6 +30,7 @@ var findbook = bookstore.find(output =>{
 if (output===inputword) return true;
 });
 console.log(findbook);
+//document.getElementById(bookdata).value=findbook;
 
 }
 
