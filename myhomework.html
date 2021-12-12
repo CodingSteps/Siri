@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function Promp(){
+let operator = prompt("Enter an operator either *,-,+,/");
+
+if ((operator == "*") || (operator == "-") || (operator == "+")|| (operator == "/")){
+console.log(operator);
+}
+else
+{
+console.log("You didn't enter a operator");
+}
+let num1 = Number(prompt("Enter your first operand"));
+let num2 = Number(prompt("Enter your second operand"));
+let parse1 = parseInt(num1);
+let parse2 = parseInt(num2);
+let calc = parse1 + operator + parse2;
+console.log(calc);
+
+let nan1 = Number.isNaN(parse1);
+let nan2 = Number.isNaN(parse2);
+if(nan1){
+alert("You didn't enter a Number!");
+}
+if(nan2){
+alert("You didn't enter a Number!");
+}
+
+}
+
+Promp();
+</script>
+</head>
+<body>
+
+</body>
+</html>
