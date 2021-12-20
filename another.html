@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+const contacts = [
+  {
+    "firstName": "Akira",
+    "lastName": "Laine",
+    "number": "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+//document.write(contacts[0].firstName);
+
+
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+ let i =0;
+ let arr;
+for (i=0;i<contacts.length;i++)
+{
+ if(name == contacts[i].firstName && contacts[i].hasOwnProperty(prop) == true)
+{
+	for (var prop in contacts[i])
+	{
+		arr = contacts[i].prop;
+        console.log(arr);
+	}
+
+}
+}
+return arr;
+}
+  // Only change code above this line
+lookUpProfile("Akira", "number");
+	</script>
+</head>
+<body>
+
+</body>
+</html>
