@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function tri()
+{
+//My Extra Charecter
+let myChar = prompt("Enter a Charecter.");
+
+//First Prompt
+let firnum;
+let lasnum;
+let i;
+do{
+	do{
+	firnum = parseInt(prompt("Enter your Start Number."));
+	console.log(Number.isNaN(firnum));
+	i = Number.isNaN(firnum);
+	if (Number.isNaN(firnum))
+	{
+		alert ("Enter your Start Number.");
+	}
+	}while(i===true)
+console.log(firnum);
+
+
+
+//Last Prompt
+
+let l;
+do{
+	lasnum = parseInt(prompt("Enter your Last Number."));
+	console.log(Number.isNaN(lasnum));
+	l = Number.isNaN(lasnum);
+	if (Number.isNaN(lasnum))
+	{
+		alert ("Enter your Last Number");
+	}
+	}while(l===true)
+console.log(lasnum);
+
+} while(lasnum < firnum)
+
+//Structure
+let p;
+let k;
+let input ="";
+ let answer ="";
+ for(z =0;z< firnum; z++)
+       {
+       	answer = answer+myChar;
+       }
+for(let k=1;k<=lasnum;k++)
+{
+	     if(k<firnum)
+			{
+			
+					input = input + "*";
+				document.write(input + "<br>");
+	    		console.log(input);
+		
+				
+
+			}
+	
+		else if(k == firnum)
+		 	{
+				let output ="";
+					for (let p =0; p<firnum; p++)
+						{
+							output += firnum;
+						}
+				document.write(output +"<br>");
+			}
+
+
+ 		else if (k>firnum && k<lasnum)
+ 			{
+			
+					//for (let k =firnum; k<=lasnum; k++)
+					//	{
+							answer += myChar;
+							document.write(answer + "<br>");
+	    					console.log(answer);
+						//}
+
+ 			}
+
+		else
+		   {
+		   	   let zoutput ="";
+	             for (let z =0; z<lasnum; z++)
+	                {
+						zoutput += lasnum;
+					}
+					document.write(zoutput +"<br>");
+    
+			}	
+  }
+	
+
+}
+
+
+
+tri();
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+function triangle(){
+let firstnum;
+let lastnum;
+let i;
+let myChar = prompt("Enter a Charecter.");
+do{
+do{
+firstnum = parseInt(prompt("Enter your Start Number"));
+console.log(Number.isNaN(firstnum));
+i = Number.isNaN(firstnum);
+if (Number.isNaN(firstnum))
+{
+prompt("Enter your Start Number");
+}
+}while(i===true)
+
+do{
+lastnum = parseInt(prompt("Enter your Last Number"));
+console.log(Number.isNaN(lastnum));
+i = Number.isNaN(lastnum);
+if (Number.isNaN(lastnum))
+{
+prompt("Enter your Last Number");
+}
+}while(i===true)
+
+}while(firstnum>lastnum)
+
+let k;
+let p;
+let input = "";
+let output = "";
+let answer ="";
+let zout = "";
+for(let m=1;m<=firstnum;m++)
+	{
+	output = output + myChar;
+    }
+
+for(let k=1;k<=lastnum;k++)
+{
+if(k<firstnum){
+input = input + "*";
+document.write(input + "<br>");
+console.log(input);
+}
+
+else if (k== firstnum)
+{
+	for(let p=1;p<=firstnum;p++)
+	{
+	answer = answer + firstnum;
+    }
+	document.write(answer + "<br>");
+	console.log(answer);
+
+}
+
+
+else if (k>firstnum && k<lastnum)
+{
+output += myChar;
+document.write(output + "<br>");
+console.log(output);
+}
+
+else
+{
+	for(let z=1;z<=lastnum;z++)
+	{
+	zout = zout + lastnum;
+    }
+	document.write(zout + "<br>");
+	console.log(zout);
+}
+
+
+
+}
+}
+triangle()
+</script>
+</head>
+<body>
+
+</body>
+</html>
