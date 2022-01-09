@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script>
+let randomarr = ["Concatonate","like","blue","red","green","purple","Rainbow"];
+let randnum = Math.floor(Math.random()* randomarr.length );
+let randomword = randomarr[randnum];
+let wordlength = randomword.length;
+let dasharr = [];
+let lastchance = 0;
+let totalchances = 5;
+
+for (i=0; i < wordlength; i++) 
+{
+dasharr.push("_");
+}
+alert(dasharr.join(" "));
+
+
+while(wordlength > 0)
+{
+
+	let input = prompt("Enter a letter");
+
+	if(input === null){
+		let conform = confirm("Do you want to QUIT?");
+		if(conform === true){
+			break;
+		}
+		else{
+			continue;
+		}
+	}
+
+	let mylength = wordlength;
+
+	while(!Number.isNaN(input) || input.length > 1){
+		input =	prompt("Invalid Input");
+	}
+
+	for (i = 0; i <= randomword.length; i++) {
+	}
+		if(randomword.charAt(i).toUpperCase() === input.toUpperCase()){
+			 dasharr[i] = input;
+			 wordlength = wordlength - 1;
+		}
+
+
+         if(mylength === wordLength){
+            lastchance=lastchance+1;
+         }
+
+
+         if(lastchance>=5){
+            alert("Sorry, the word was"+randomword+"Try again next time");
+         	break;
+         }  
+
+         let chances = (totalchances-lastchances);
+         alert(dash.join(' ') + "/n" + "You have " + chances + " chances left to solve the puzzle." );
+
+         if(wordLength===0){
+       		alert("You won!");
+       	}    
+}
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
