@@ -35,19 +35,20 @@ while(wordlength > 0)
 
 	let mylength = wordlength;
 
-	while(!Number.isNaN(input) || input.length > 1){
+	while(input.length > 1 || !isNaN(input)){
 		input =	prompt("Invalid Input");
 	}
 
 	for (i = 0; i <= randomword.length; i++) {
-	}
+	
 		if(randomword.charAt(i).toUpperCase() === input.toUpperCase()){
 			 dasharr[i] = input;
 			 wordlength = wordlength - 1;
 		}
+	}	
 
 
-         if(mylength === wordLength){
+         if(mylength === wordLength){ // variable wordlength and not wordLength..check everywhere
             lastchance=lastchance+1;
          }
 
@@ -57,8 +58,8 @@ while(wordlength > 0)
          	break;
          }  
 
-         let chances = (totalchances-lastchances);
-         alert(dash.join(' ') + "/n" + "You have " + chances + " chances left to solve the puzzle." );
+         let chances = (totalchances-lastchances); // variable lastchance
+         alert(dash.join(' ') + "/n" + "You have " + chances + " chances left to solve the puzzle." );  // array name is dasharr and not dash
 
          if(wordLength===0){
        		alert("You won!");
