@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Convert</title>
+<style>
+	body{
+		background-color: peachpuff;
+	}
+</style>
+<script>
+	let myHistory = [];
+	function Binary(){
+	    let numb = parseInt(document.getElementById("num").value);
+		let myArr = [];
+		let output;
+		let input;
+		let store;
+		for (let i = 0; i <= 100; i++) {
+			 output = Math.floor(numb/2);
+			 input = numb % 2;
+			 myArr.unshift(input);
+			 numb = output;
+			 if(numb < 2){
+			 myArr.unshift(input);		 
+			 break;
+			 }
+		}
+		let str = "Binary" + myArr +"<br>";
+		myHistory.push(str);
+		document.getElementById("myput").innerHTML = myArr;
+
+	}
+
+	function Octal(){
+	    let numb = parseInt(document.getElementById("num").value);
+		let myArr = [];
+		let output;
+		let input;
+		let store;
+		for (let i = 0; i <= 100; i++) {
+			 output = Math.floor(numb/8);
+			 input = numb % 8;
+			 myArr.unshift(input);
+			 numb = output;
+			 if(numb < 8){
+			 myArr.unshift(input);	
+			 break;
+			 }
+		}
+			let str = "Octal" + myArr +"<br>";
+		myHistory.push(str);
+		document.getElementById("myput").innerHTML = myArr;
+		
+	}
+
+	function Hexadecimal(){
+	    let numb = parseInt(document.getElementById("num").value);
+		let myArr = [];
+		let output;
+		let input;
+		let store;
+		for (let i = 0; i <= 100; i++) {
+			 output = Math.floor(numb/16);
+			 input = numb % 16;
+			 numb = output;
+			 if(input === 10){
+			 	input = "A";
+			 }
+			 if(input === 11){
+			 	input = "B";
+			 }
+			 if(input === 12){
+			 	input = "C";
+			 }
+			 if(input === 13){
+			 	input = "D";
+			 }
+			 if(input === 14){
+			 	input = "E";
+			 }
+			 if(input === 15){
+			 	input = "F";
+			 }
+			 myArr.unshift(input);
+             
+		if(numb < 16)
+		 {
+			 if(input === 10){
+			 	input = "A";
+			 }
+			 if(input === 11){
+			 	input = "B";
+			 }
+			 if(input === 12){
+			 	input = "C";
+			 }
+			 if(input === 13){
+			 	input = "D";
+			 }
+			 if(input === 14){
+			 	input = "E";
+			 }
+			 if(input === 15){
+			 	input = "F";
+			 }
+			 myArr.unshift(input);
+			 break;
+		 }
+
+		}
+		let str = "Hexadecimal" + myArr +"<br>";
+		myHistory.push(str);
+		document.getElementById("myput").innerHTML = myArr;
+		
+	}
+     
+
+	function History()
+	{
+		document.getElementById("myput").innerHTML = myHistory;
+		}
+	
+</script>
+</head>
+<body>
+	<p>Enter a number:<input type="number" id="num" class="hi"></p>
+	<button onclick="Binary()">Binary</button><br>
+	<button onclick="Octal()">Octal</button><br>
+	<button onclick="Hexadecimal()">Hexadecimal</button><br>
+	<button onclick="History()">History</button><br>
+	<p id="myput"></p>
+	
+</body>
+</html>
